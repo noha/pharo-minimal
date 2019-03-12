@@ -12,8 +12,13 @@ run-server:
 run-client: 
 	make -C client run
 
+dist: server client
+	./make_dist.sh
+
 clean:
 	make -C server clean
 	make -C client clean
+	rm -rf telepharo
+	rm -f telepharo.zip
 	
 .PHONY: server run-server client run-client

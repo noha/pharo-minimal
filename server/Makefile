@@ -19,7 +19,7 @@ run: server.image run.sh
 	./run.sh
 
 clean:
-	rm -f pharo pharo-ui PharoV60.sources
+	rm -f pharo pharo-ui PharoV60.sources PharoDebug.log
 	rm -rf pharo-vm
 	rm -f *.image
 	rm -f *.changes

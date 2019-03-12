@@ -1,4 +1,4 @@
-client: pharo-vm client.image
+client: client.image
 
 pharo-vm: download-vm.sh
 	./download-vm.sh
@@ -13,7 +13,7 @@ run:
 	./pharo-ui client.image
 
 clean:
-	rm -f pharo pharo-ui *bak* *.sources
+	rm -f pharo pharo-ui *bak* *.sources PharoDebug.log
 	rm -rf pharo-vm image.*
 	rm -f *.image
 	rm -f *.changes
