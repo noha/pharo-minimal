@@ -26,4 +26,5 @@ deploy:
   file: telepharo.zip
   skip_cleanup: true
   on:
+    tags: true
     repo: noha/pharo-minimal
