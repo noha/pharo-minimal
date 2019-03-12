@@ -1,4 +1,4 @@
-server: pharo-vm telepharo.image
+server: server.image
 
 PharoV60.sources: 
 	touch PharoV60.sources 
@@ -12,10 +12,10 @@ minimal-pharo.image: pharo-vm build-minimal-pharo.sh
 minimal.image: pharo-vm minimal-pharo.image build-minimal.sh
 	./build-minimal.sh
 
-telepharo.image: pharo-vm minimal.image build-telepharo.sh
-	./build-telepharo.sh
+server.image: pharo-vm minimal.image build-server.sh
+	./build-server.sh
 
-run: telepharo.image run.sh
+run: server.image run.sh
 	./run.sh
 
 clean:
