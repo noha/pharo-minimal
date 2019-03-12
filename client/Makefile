@@ -1,4 +1,4 @@
-client: pharo-vm telepharo.image
+client: pharo-vm client.image
 
 pharo-vm: download-vm.sh
 	./download-vm.sh
@@ -6,11 +6,11 @@ pharo-vm: download-vm.sh
 Pharo.image: pharo-vm download-image.sh
 	./download-image.sh
 
-telepharo.image: Pharo.image build-telepharo.sh
-	./build-telepharo.sh
+client.image: Pharo.image build-client.sh
+	./build-client.sh
 
 run: 
-	./pharo-ui telepharo.image
+	./pharo-ui client.image
 
 clean:
 	rm -f pharo pharo-ui *bak* *.sources
