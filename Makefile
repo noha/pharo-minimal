@@ -1,16 +1,16 @@
 all: server 
 
 server:
-	make -C server
+	VM_ARCH=32 make -C server
 	
 client:
-	make -C client
+	VM_ARCH=64 make -C client
 	
 run-server: 
-	make -C server run
+	VM_ARCH=32 make -C server run
 	
 run-client: 
-	make -C client run
+	VM_ARCH=64 make -C client run
 
 dist: server client
 	./make_dist.sh
@@ -20,5 +20,9 @@ clean:
 	make -C client clean
 	rm -rf telepharo
 	rm -f telepharo.zip
+
+realclean: 
+	rm -rf vm/32
+	rm -rf vm/64
 	
 .PHONY: server run-server client run-client

@@ -1,16 +1,16 @@
 client: client.image
 
-pharo-vm: download-vm.sh
-	./download-vm.sh
+pharo-vm:
+	../bin/download-vm.sh
 
-Pharo.image: pharo-vm download-image.sh
-	./download-image.sh
+Pharo.image: pharo-vm 
+	../bin/download-image.sh
 
 client.image: Pharo.image build-client.sh
 	./build-client.sh
 
 run: 
-	./pharo-ui client.image
+	../bin/pharo-ui client.image st start.st
 
 clean:
 	rm -f pharo pharo-ui *bak* *.sources PharoDebug.log

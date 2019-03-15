@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ -z "$VM_ARCH" ];then
+    VM_ARCH=64
+fi
+
+`dirname $0`/../vm/$VM_ARCH/pharo-ui $*

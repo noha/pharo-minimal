@@ -1,3 +1,3 @@
 #!/bin/sh
 
-./pharo telepharo.image eval --no-quit "TlpRemoteUIManager registerOnPort: 40423"
+../bin/pharo server.image eval --no-quit "TlpRemoteUIManager registerOnPort: 40423"

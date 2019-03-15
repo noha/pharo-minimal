@@ -3,8 +3,8 @@ server: server.image
 PharoV60.sources: 
 	touch PharoV60.sources 
 
-pharo-vm: PharoV60.sources download-vm.sh
-	./download-vm.sh
+pharo-vm: PharoV60.sources
+	../bin/download-vm.sh
 
 minimal-pharo.image: pharo-vm build-minimal-pharo.sh
 	./build-minimal-pharo.sh
@@ -21,7 +21,7 @@ run: server.image run.sh
 clean:
 	rm -f pharo pharo-ui PharoV60.sources PharoDebug.log
 	rm -rf pharo-vm
-	rm -f *.image
+	rm -f *.image *.sources
 	rm -f *.changes
 	rm -rf pharo-local
 	rm -rf github-cache
