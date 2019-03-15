@@ -1,4 +1,4 @@
-# playground for minimal image creation
+# playground for minimal image creation [![Build Status](https://travis-ci.org/noha/pharo-minimal.svg?branch=master)](https://travis-ci.org/noha/pharo-minimal)
 
 This repository contains scripts and patches in order to build a pharo minimal telepharo image. 
 
