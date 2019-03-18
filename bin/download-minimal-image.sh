@@ -5,8 +5,10 @@ then
     VM_ARCH=64
 fi
 
-wget http://files.pharo.org/image/80/latest-minimal-${VM_ARCH}.zip
-unzip latest-minimal-${VM_ARCH}.zip
-mv Pharo8.0-SNAPSHOT-metacello-${VM_ARCH}bit-*.image minimal-pharo.image
-mv Pharo8.0-SNAPSHOT-metacello-${VM_ARCH}bit-*.changes minimal-pharo.changes
-rm latest-minimal-${VM_ARCH}.zip
+if [ ! -f "minimal-pharo.image" ]; then
+    wget http://files.pharo.org/image/80/latest-minimal-${VM_ARCH}.zip
+    unzip latest-minimal-${VM_ARCH}.zip
+    mv Pharo8.0-SNAPSHOT-metacello-${VM_ARCH}bit-*.image minimal-pharo.image
+    mv Pharo8.0-SNAPSHOT-metacello-${VM_ARCH}bit-*.changes minimal-pharo.changes
+    rm latest-minimal-${VM_ARCH}.zip
+fi
