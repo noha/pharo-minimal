@@ -1,3 +1,3 @@
 #!/bin/sh
 
-curl get.pharo.org/64/80 | bash
+curl get.pharo.org/${VM_ARCH}/80 | bash

@@ -4,12 +4,13 @@ telepharo:
 	make -C telepharo
 	
 clean:
+	make -C minimal clean
 	make -C telepharo clean
 
 dist: 
-	make -C telepharo dist
+	VM_ARCH=32 make -C telepharo dist
 
-realclean: 
+realclean: clean
 	rm -rf vm/32
 	rm -rf vm/64
 	

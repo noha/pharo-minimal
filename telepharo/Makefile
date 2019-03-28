@@ -2,16 +2,12 @@ server: server.image
 
 client: client.image
 
-Pharo.image: 
+Pharo.image:
 	../bin/download-image.sh
 
-minimal-pharo.image: build-minimal-pharo.sh
-	../bin/download-vm.sh
-	touch PharoV60.sources 
-	./build-minimal-pharo.sh
-
-minimal.image: minimal-pharo.image build-minimal.sh
-	./build-minimal.sh
+minimal.image: 
+	make -C ../minimal
+	cp ../minimal/minimal.image ../minimal/minimal.changes ../minimal/PharoV60.sources .
 
 server.image: minimal.image build-server.sh
 	./build-server.sh
