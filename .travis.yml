@@ -23,6 +23,7 @@ deploy:
   provider: releases
   api_key:
     secure: oQT+B949yn7xCDAAk3UXoi5QEMDiHiiqy7HsxuXle8oNvsmu9N0K7HrgZYHU2RR51PrqyM0JT45+D6LmFiIHCr065xSk8YQzCcrMN5G+cevs+1fL0juEEvWi9bNMVl+GgjoHvk1qC0Yr5bkgSYv43HqajV6vOQqLnunZJhORXiz4ew+R4mRuGtoFM278bPwoyU5hd4iQKC40fr2jEhciiV5f6hoXXHIEagflozAntw2GclJiy4iQ+f90EUHgkDFKvGc7XwkgT13Exbc0YT9UjudR71pKb6M/HZr61+luMGwoLmn6+lAl1rNu5vmhGhDzFUmVIHmLlYYTRhztOGnjIfVsWvMEL8QA55p+L2gvz3tm7yNsZ6wYo2XBqy4ziV8ll5N5gmFbUzeudRSGcg9Du9vltDz/B42AcYs1c6yjRI0HvizIFeU9weRuRo62VQ649YbcWqfgwrPZ1PF6uC8l+yLcFIEJw7dOfhmhR+a0+TOVLub4H1/F8Qu8ibCzieY2qe4+3CXSNYug9LIL9Bl1nMi+3GYaH7WcPJUWBu/HK+/nLFFgMSLvfltwEneaXgD2XjpqjjBsJ4it5BzuKyhUdMn4pArJBkzIeZ89yU/gLi6xFIZG3qqQcRy2eGxv33fiLX0dDPyag7UhzHGAvnPTl3zJTZqi8ehtWnBXxmd++FM=
+  file_glob: true
   file: ./*/*.zip
   skip_cleanup: true
   on:
