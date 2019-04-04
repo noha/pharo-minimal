@@ -7,7 +7,7 @@ BIN_PATH=`dirname $0`
 
 if [ -z "$VM_ARCH" ];
 then
-    VM_ARCH=64
+    VM_ARCH=32
 fi
 
 VM_PATH="$BIN_PATH/../vm/$VM_ARCH"

@@ -2,7 +2,7 @@
 
 if [ -z "$VM_ARCH" ];
 then
-    VM_ARCH=64
+    VM_ARCH=32
 fi
 
 if [ ! -f "minimal-pharo.image" ]; then

@@ -1,7 +1,13 @@
 #!/bin/sh
 
 if [ -z "$VM_ARCH" ];then
-    VM_ARCH=64
+    VM_ARCH=32
 fi
 
-`dirname $0`/../vm/$VM_ARCH/pharo-ui $*
+CDIR=`dirname $0`
+
+if [ ! -d "$CDIR/../vm/$VM_ARCH/" ]; then
+    $CDIR/download-vm.sh
+fi
+
+${CDIR}/../vm/$VM_ARCH/pharo-ui $*
