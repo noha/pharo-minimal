@@ -1,4 +1,4 @@
-all: telepharo
+all: minimal telepharo seaside
 
 telepharo:
 	make -C telepharo
