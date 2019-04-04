@@ -1,0 +1,8 @@
+*.image
+*.changes
+*.sources
+PharoDebug.log
+vm/
+github-cache/
+pharo-local/
+crash.dmp
