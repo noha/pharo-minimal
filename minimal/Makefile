@@ -18,6 +18,8 @@ clean:
 	rm -f *.sources PharoDebug.log
 	rm -rf image.*
 	rm -f *.image *.changes
+	rm -f minimal.zip
+
+realclean: clean
 	rm -rf pharo-local
 	rm -rf github-cache
-	rm -f minimal.zip

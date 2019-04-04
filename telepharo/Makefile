@@ -27,13 +27,22 @@ run-client: client.image
 	../bin/pharo-ui client.image st start.st
 
 .PHONY: server client run-client run-server
-clean:
+
+clean-client: 
+	rm -f Pharo.image Pharo.changes client.image client.changes
+	rm -f PharoV60.sources
+
+clean-server:
+	rm -f minimal.image minimal.changes server.image server.changes
+
+clean: clean-client clean-server
 	rm -f *.sources PharoDebug.log
-	rm -rf image.*
-	rm -f *.image *.changes
+	rm -f telepharo.zip
+
+realclean: clean
 	rm -rf pharo-local
 	rm -rf github-cache
-	rm -f telepharo.zip
+
 
 
 
